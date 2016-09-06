@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@drawable/ic_location_popup">
+
+    <TextView android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#ff323232"
+        android:padding="2dip"
+        android:text="name\ntel"/>
+
+    <ImageView android:id="@+id/phone"
+        android:layout_width="28dip"
+        android:layout_height="28dip"
+        android:src="@drawable/ic_poi_phone"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@+id/name"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"/>
+
+</RelativeLayout>

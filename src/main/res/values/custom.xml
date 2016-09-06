@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义-->
+    <string name="pull_to_refresh_locationing_label">正在定位当前位置...</string>
+    <string name="msg_location_failed">抱歉，定位失败了哦</string>
+    <string name="s_msg_intent_failed">抱歉，手机内没有找到可用的应用程序。</string>
+    <string name="msg_wait_request_location">正在定位....</string>
+    <string name="format_msg_wait_request_search">正在检索[%s]....</string>
+    <string name="title_street_scape">查看全景</string>
+    <string name="title_navigation">地图导航</string>
+    <string name="menu_option_call">"拨打电话"</string>
+    <string name="set_startplace">使用位置</string>
+    <string name="no_baidu_map_app">"导航需要先安装百度地图，是否前往百度下载?"</string>
+    <string name="msg_no_phone_for_maintenance_point">"抱歉，暂未提供电话"</string>
+    <string name="msg_no_streetscape_for_maintenance_point">"抱歉，暂未提供街景"</string>
+    <string name="menu_list_view">列表视图</string>
+    <string name="menu_map_view">地图视图</string>
+    <string name="menu_streetscape_view">全景视图</string>
+    <string name="title_map">地图</string>
+    <string name="format_accuracy">%s米</string>
+</resources>
