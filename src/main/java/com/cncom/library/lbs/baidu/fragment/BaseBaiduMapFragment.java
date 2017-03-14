@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -109,6 +110,8 @@ public class BaseBaiduMapFragment extends Fragment implements View.OnClickListen
     public static final String EXTRA_START_LOCATION = "extra_start_location";
 
     private boolean mFirstOnResume = true;
+
+    protected ProgressBar contentLoadingProgressBar;
 
     protected int getContentLayout() {
         return R.layout.fragment_baidu_mapview;
@@ -263,10 +266,18 @@ public class BaseBaiduMapFragment extends Fragment implements View.OnClickListen
                 BaseBaiduMapFragment.this.onGetReverseGeoCodeResult(result);
             }
         });
+        contentLoadingProgressBar = (ProgressBar) view.findViewById(R.id.progressbar);
         initMyLocationConfigeration();
         initView(view);
         return view;
 
+    }
+
+
+    public void showProgress(boolean show) {
+        if (contentLoadingProgressBar != null) {
+            contentLoadingProgressBar.setVisibility(show?View.VISIBLE:View.GONE);
+        }
     }
 
 
@@ -335,10 +346,18 @@ public class BaseBaiduMapFragment extends Fragment implements View.OnClickListen
     }
 
     /**
+     * 正向编码地址获取经纬度
+     * @param addrStr
+     */
+    public void geocode(String addrStr) {
+        geocode("", addrStr);
+    }
+
+    /**
      * 反向编码经纬度获取位置信息
      * @param location
      */
-    public void geocode(LatLng location) {
+    public void reverseGeoCode(LatLng location) {
         mGeoCoderSearch.reverseGeoCode(new ReverseGeoCodeOption()
                 .location(location));
     }
@@ -567,6 +586,7 @@ public class BaseBaiduMapFragment extends Fragment implements View.OnClickListen
     protected void onGetReverseGeoCodeResult(ReverseGeoCodeResult result) {
         if (result == null || result.error != SearchResult.ERRORNO.NO_ERROR) {
             //没有找到检索结果
+            return;
         }
         //获取反向地理编码结果
     }

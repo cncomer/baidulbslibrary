@@ -25,6 +25,8 @@ import java.util.List;
 
 /**
  * 使用说明http://developer.baidu.com/map/index.php?title=android-locsdk/guide/v4-2
+ *
+ * API控制台 http://lbsyun.baidu.com/apiconsole/key
  * @author bestjoy
  *
  */

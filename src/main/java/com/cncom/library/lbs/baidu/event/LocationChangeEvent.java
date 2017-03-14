@@ -6,8 +6,6 @@ import com.baidu.location.BDLocation;
  * Created by bestjoy on 15/9/2.
  */
 public class LocationChangeEvent {
-    public int mId = -1;
-
     public int mCode = CODE_RETURN_LOCATION_OK;
     public BDLocation mBDLocation;
     public BDLocation mLastBDLocation;
