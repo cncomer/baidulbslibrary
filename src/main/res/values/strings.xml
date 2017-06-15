@@ -125,6 +125,6 @@
     <string name="instruction">当设计的UI与地图部分重叠时，设置地图的padding值,以防止UI遮挡</string>
 
 
-
+    <string name="baidu_lbsapi_AppKey_release">4NE32wi1r3eKVuVeV3UcgAP3</string>
 
 </resources>

@@ -27,18 +27,22 @@
         <!--<meta-data-->
             <!--android:name="com.baidu.lbsapi.API_KEY"-->
             <!--android:value="请输入KEY" />-->
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="@string/baidu_lbsapi_AppKey_release"/>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
 
-        <!--<service android:name="com.cncom.library.lbs.baidu.service.BaiduLocationService">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="${applicationId}.intent.ACTION_REQUEST_LOCATION" />-->
-                <!--<action android:name="${applicationId}.intent.ACTION_STOP_LOCATION" />-->
-                <!--<category android:name="android.intent.category.DEFAULT"/>-->
-            <!--</intent-filter>-->
-        <!--</service>-->
+        <service android:name="com.cncom.library.lbs.baidu.service.BaiduLocationService">
+            <intent-filter>
+                <action android:name="${applicationId}.intent.ACTION_REQUEST_LOCATION" />
+                <action android:name="${applicationId}.intent.ACTION_STOP_LOCATION" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
